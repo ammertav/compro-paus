@@ -1,0 +1,58 @@
+import Container from "../ui/Container";
+
+export default function Hero() {
+    return (
+        <section className="relative w-full pt-24 pb-48 mt-4 md:mt-0">
+            {/* Background Wave */}
+            <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-auto -z-10 pointer-events-none">
+                <img
+                    src="/icons/wave-1.svg"
+                    alt="wave background"
+                    className="w-full h-auto object-cover md:object-fill min-h-[400px]"
+                />
+            </div>
+
+            <div className="absolute top-[78%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-auto -z-10 pointer-events-none">
+                <img
+                    src="/icons/wave-2.svg"
+                    alt="wave background"
+                    className="w-full h-auto object-cover md:object-fill min-h-[400px]"
+                />
+            </div>
+
+            <Container className="flex flex-col md:flex-row justify-between items-center gap-12 relative z-10 w-full">
+                <div className="w-full md:w-7/12 flex flex-col gap-6 relative z-10">
+                    <h1 className="text-3xl lg:text-4xl font-normal leading-snug text-primary">
+                        <span className="font-bold ">IT Solutions</span> dan{" "}
+                        <span className="font-bold ">
+                            Creative & Digital Agency
+                        </span>{" "}
+                        yang berkomitmen membantu bisnis{" "}
+                        <span className="font-bold ">beradaptasi</span> dan{" "}
+                        <span className="font-bold ">berkembang</span> secara
+                        berkelanjutan.
+                    </h1>
+                    <p className="w-4/5 text-primary text-lg leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur. Dui fermentum
+                        aliquet gravida at velit eu.
+                    </p>
+                    <div>
+                        <button className="bg-primary text-white px-8 py-3 mt-2 rounded-full font-bold uppercase text-sm tracking-wide">
+                            Connect US
+                        </button>
+                    </div>
+                </div>
+                <div className="w-full md:w-5/12 relative z-10">
+                    {/* Bagian gambar yang disesuaikan */}
+                    <figure className="w-full aspect-[5/5] rounded-[48px] overflow-hidden shadow-lg">
+                        <img
+                            src="/images/image-hero.png"
+                            alt="hero section"
+                            className="w-full h-full object-cover object-bottom"
+                        />
+                    </figure>
+                </div>
+            </Container>
+        </section>
+    );
+}

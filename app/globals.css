@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ECECEC;
+  --foreground: #171717;
+  --primary: #01223F;
+  --default-32: 32px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --text-default-32: var(--default-32);
+}
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ECECEC;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+
+@layer utilities {
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
