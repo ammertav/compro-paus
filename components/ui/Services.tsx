@@ -1,6 +1,6 @@
 import Container from "./Container";
 import NumberedListItem from "./NumberedListItem";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export interface ServiceData {
     title: string;
@@ -16,26 +16,28 @@ export interface ServicesProps {
     children?: React.ReactNode;
 }
 
-export default function Services({ 
-    title, 
-    highlightTitle, 
-    services, 
+export default function Services({
+    title,
+    highlightTitle,
+    services,
     theme = "light",
     className,
-    children 
+    children,
 }: ServicesProps) {
     const isDark = theme === "dark";
 
     return (
-        <section 
-            className={twMerge(
-                "relative w-full h-full", 
-                isDark ? "bg-[#01223F] text-white" : "text-primary bg-transparent",
-                className
+        <section
+            className={cn(
+                "relative w-full h-full",
+                isDark
+                    ? "bg-[#01223F] text-white"
+                    : "text-primary bg-transparent",
+                className,
             )}
         >
             <Container className="relative z-10 pb-32 ">
-                <h1 className="text-default-32 mb-8">
+                <h1 className="text-2xl xl:text-default-32 mb-8">
                     {title} <span className="font-bold">{highlightTitle}</span>
                 </h1>
                 <ul className="flex flex-wrap gap-x-6 gap-y-12 text-left mt-8">
@@ -46,9 +48,11 @@ export default function Services({
                             title={service.title}
                             description={service.description}
                             className="w-full md:w-[calc(50%-12px)]"
-                            numberBoxClassName={twMerge(
-                                "w-14 h-14 text-3xl",
-                                isDark ? "bg-white text-primary" : "bg-primary text-white"
+                            numberBoxClassName={cn(
+                                "w-14 h-14",
+                                isDark
+                                    ? "bg-white text-primary"
+                                    : "bg-primary text-white",
                             )}
                         />
                     ))}

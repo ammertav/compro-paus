@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export interface BrandCardProps {
     name: string;
@@ -19,13 +19,13 @@ export default function BrandCard({
 }: BrandCardProps) {
     return (
         <div
-            className={twMerge(
+            className={cn(
                 isPrimary ? "bg-primary text-white" : "bg-white text-primary",
-                "flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-6 px-10 py-14 rounded-[24px] w-full lg:w-3/6",
+                "flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-6 px-10 py-14 rounded-[24px] w-full",
                 className,
             )}
         >
-            <figure className="w-[120px] lg:w-[150px] h-[120px] lg:h-[150px] shrink-0 flex items-center justify-center">
+            <figure className="w-[140px] xl:w-[180px] h-[140px] xl:h-[180px] shrink-0 flex items-center justify-center p-4 border border-gray-200 rounded-full">
                 <img
                     src={logo}
                     alt={name}
@@ -35,14 +35,16 @@ export default function BrandCard({
 
             <div className="text-center sm:text-left">
                 <h2
-                    className={twMerge(
-                        "text-2xl font-bold mb-3",
+                    className={cn(
+                        "text-xl xl:text-2xl font-bold mb-3",
                         headingClassName,
                     )}
                 >
                     {name}
                 </h2>
-                <p className="text-lg lg:text-xl leading-relaxed">{description}</p>
+                <p className="text-base xl:text-xl leading-relaxed">
+                    {description}
+                </p>
             </div>
         </div>
     );

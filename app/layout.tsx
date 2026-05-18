@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const PoppinsSans = Poppins({
   subsets: ["latin"],
@@ -19,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className={`${PoppinsSans.className} min-h-full flex flex-col overflow-x-hidden`}>
+    <html lang="en" className={cn("h-full antialiased", "font-sans", geist.variable)}>
+      <body className={`${PoppinsSans.className} min-h-full flex flex-col `}>
         <Navbar />
         <main className="flex w-full flex-col min-h-screen">
           {children}

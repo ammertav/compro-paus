@@ -22,8 +22,8 @@ export default function VisiMisi() {
 
             <Container className="relative z-10 flex flex-col text-center gap-12">
                 <div className="text-center">
-                    <h1 className="text-default-32">Visi Kami</h1>
-                    <p className="text-2xl font-light mt-8">
+                    <h1 className="text-2xl xl:text-default-32">Visi Kami</h1>
+                    <p className="text-xl xl:text-2xl font-light mt-8">
                         Menjadi{" "}
                         <span className="font-bold">konglomerasi terdepan</span>{" "}
                         di Indonesia yang{" "}
@@ -38,7 +38,7 @@ export default function VisiMisi() {
                 </div>
 
                 <div>
-                    <h1 className="text-default-32">Misi Kami</h1>
+                    <h1 className="text-2xl xl:text-default-32">Misi Kami</h1>
                     <ul className="flex flex-wrap gap-6 text-left mt-8">
                         {misi.map((item, index) => (
                             <NumberedListItem

@@ -1,17 +1,63 @@
 import BrandCard from "../ui/BrandCard";
 import Container from "../ui/Container";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselDots,
+} from "../ui/Carousel";
 
-const fitur = [
-    "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
-    "Manajemen inventori terintegrasi untuk kontrol stok yang lebih optimal",
-    "Dashboard terpusat untuk pengelolaan multi-cabang secara efisien",
-    "Sistem yang fleksibel dan dapat disesuaikan dengan kebutuhan bisnis",
-    "Fitur pemesanan berbasis barcode untuk mempercepat layanan dan mengurangi beban operasional",
+const dummyProducts = [
+    {
+        name: "Beilpos",
+        description:
+            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.png",
+        isPrimary: false,
+        fitur: [
+            "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
+            "Manajemen inventori terintegrasi untuk kontrol stok yang lebih optimal",
+            "Dashboard terpusat untuk pengelolaan multi-cabang secara efisien",
+            "Sistem yang fleksibel dan dapat disesuaikan dengan kebutuhan bisnis",
+            "Fitur pemesanan berbasis barcode untuk mempercepat layanan dan mengurangi beban operasional",
+        ],
+    },
+    {
+        name: "Beilpos",
+        description:
+            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.png",
+        isPrimary: false,
+        fitur: [
+            "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
+            "Manajemen inventori terintegrasi untuk kontrol stok yang lebih optimal",
+            "Dashboard terpusat untuk pengelolaan multi-cabang secara efisien",
+            "Sistem yang fleksibel dan dapat disesuaikan dengan kebutuhan bisnis",
+            "Fitur pemesanan berbasis barcode untuk mempercepat layanan dan mengurangi beban operasional",
+        ],
+    },
+    {
+        name: "Beilpos",
+        description:
+            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.png",
+        isPrimary: false,
+        fitur: [
+            "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
+            "Manajemen inventori terintegrasi untuk kontrol stok yang lebih optimal",
+            "Dashboard terpusat untuk pengelolaan multi-cabang secara efisien",
+            "Sistem yang fleksibel dan dapat disesuaikan dengan kebutuhan bisnis",
+            "Fitur pemesanan berbasis barcode untuk mempercepat layanan dan mengurangi beban operasional",
+        ],
+    },
 ];
 
 export default function Product() {
     return (
-        <section className="bg-primary mt-24 lg:mt-32 relative pt-10 lg:pt-0 pb-16 lg:pb-40">
+        <section
+            id="products"
+            className="bg-primary mt-24 lg:mt-32 relative scroll-mt-32 pt-10 lg:pt-0 pb-16 lg:pb-24"
+        >
             {/* Wave SVG */}
             <div className="absolute top-0 left-0 w-full -translate-y-[99%] overflow-hidden leading-none">
                 <svg
@@ -30,35 +76,57 @@ export default function Product() {
             </div>
 
             {/* Content */}
-            <Container>
-                <h2 className="text-white text-3xl mb-8">
+            <Container className="pr-10 xl:pr-0">
+                <h2 className="text-white text-2xl xl:text-default-32 mb-8">
                     Ammertav <span className="font-bold">Products</span>
                 </h2>
 
-                {/* Konten produk nantinya akan ditambahkan di sini */}
-                <div className="flex gap-14 flex-col lg:flex-row">
-                    <div className="w-full lg:w-[55%]">
-                        <BrandCard
-                            className="w-full lg:w-full h-full py-10 justify-center items-center lg:py-0 lg:px-4"
-                            headingClassName="text-default-32"
-                            name="Beilpos"
-                            description="Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol."
-                            logo="/images/logo-brand-beil.png"
-                            isPrimary={false}
-                        />
-                    </div>
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true, // Manual & bisa muter dari akhir ke awal lagi
+                    }}
+                    className="w-full"
+                >
+                    <CarouselContent className="-ml-4 items-stretch">
+                        {dummyProducts.map((product, index) => (
+                            <CarouselItem key={index} className="pl-4">
+                                <div className="flex gap-6 xl:gap-14 flex-col lg:flex-row h-full">
+                                    <div className="w-full xl:w-[55%] flex">
+                                        <BrandCard
+                                            className="w-full h-full py-10 justify-center items-center lg:py-0 lg:px-8"
+                                            name={product.name}
+                                            description={product.description}
+                                            logo={product.logo}
+                                            isPrimary={product.isPrimary}
+                                        />
+                                    </div>
 
-                    <div className="w-full lg:w-[45%] text-white">
-                        <h2 className="text-2xl font-bold mb-3">FITUR</h2>
-                        <ul className="list-disc pl-5 text-lg  lg:text-xl">
-                            {fitur.map((feature, index) => (
-                                <li key={index} className="pl-2 mb-2">
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+                                    <div className="w-full xl:w-[45%] text-white flex flex-col justify-center py-4">
+                                        <h2 className="text-xl xl:text-2xl font-bold mb-3 uppercase">
+                                            Fitur
+                                        </h2>
+                                        <ul className="list-disc pl-5 text-base xl:text-xl">
+                                            {product.fitur.map(
+                                                (feature, idx) => (
+                                                    <li
+                                                        key={idx}
+                                                        className="pl-2 mb-2"
+                                                    >
+                                                        {feature}
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+
+                    {/* Komponen titik-titik di bawahnya */}
+                    <CarouselDots className="mt-12" />
+                </Carousel>
             </Container>
         </section>
     );

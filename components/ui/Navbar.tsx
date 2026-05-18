@@ -1,19 +1,22 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white w-full sticky top-0 z-50 ">
+        <nav className="bg-white w-full sticky top-0 z-100">
             <div className="w-full flex items-center justify-between max-w-6xl mx-auto py-4 px-6 md:px-16">
                 <figure className="flex-shrink-0 z-50 cursor-pointer">
-                    <img
-                        src="/images/logo-paus-black.png"
-                        alt="logo paus"
-                        className="h-8 object-contain"
-                    />
+                    <Link href="#home" className="w-full h-full">
+                        <img
+                            src="/images/logo-paus-black.png"
+                            alt="logo paus"
+                            className="h-8 object-contain"
+                        />
+                    </Link>
                 </figure>
 
                 {/* Hamburger */}
@@ -59,28 +62,28 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center justify-center space-x-12">
                     <ul className="flex items-center justify-center space-x-12">
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#products"
                                 className="text-slate-800 hover:text-black font-medium"
                             >
                                 Products
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#brands"
                                 className="text-slate-800 hover:text-black font-medium"
                             >
                                 Brands
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#about"
                                 className="text-slate-800 hover:text-black font-medium"
                             >
                                 About Us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -98,31 +101,31 @@ export default function Navbar() {
                 >
                     <ul className="flex flex-col items-center space-y-8 text-lg mb-8">
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#products"
                                 onClick={() => setIsOpen(false)}
                                 className="text-slate-800 hover:text-black font-semibold"
                             >
                                 Products
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#brands"
                                 onClick={() => setIsOpen(false)}
                                 className="text-slate-800 hover:text-black font-semibold"
                             >
                                 Brands
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                href="#about"
                                 onClick={() => setIsOpen(false)}
                                 className="text-slate-800 hover:text-black font-semibold"
                             >
                                 About Us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 

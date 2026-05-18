@@ -2,7 +2,7 @@ import Container from "../ui/Container";
 
 export default function Hero() {
     return (
-        <section className="relative w-full pt-24 pb-48 mt-4 md:mt-0">
+        <section className="relative w-full pt-14 xl:pt-24 pb-24 xl:pb-48 overflow-hidden" id="home">
             {/* Background Wave */}
             <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-auto -z-10 pointer-events-none">
                 <img
@@ -22,7 +22,7 @@ export default function Hero() {
 
             <Container className="flex flex-col md:flex-row justify-between items-center gap-12 relative z-10 w-full">
                 <div className="w-full md:w-7/12 flex flex-col gap-6 relative z-10">
-                    <h1 className="text-3xl lg:text-4xl font-normal leading-snug text-primary">
+                    <h1 className="text-2xl xl:text-default-32 font-normal leading-snug text-primary">
                         <span className="font-bold ">IT Solutions</span> dan{" "}
                         <span className="font-bold ">
                             Creative & Digital Agency
@@ -32,7 +32,7 @@ export default function Hero() {
                         <span className="font-bold ">berkembang</span> secara
                         berkelanjutan.
                     </h1>
-                    <p className="w-4/5 text-primary text-lg leading-relaxed">
+                    <p className="w-full lg:w-4/5 text-primary text-base xl:text-lg leading-relaxed">
                         Lorem ipsum dolor sit amet consectetur. Dui fermentum
                         aliquet gravida at velit eu.
                     </p>

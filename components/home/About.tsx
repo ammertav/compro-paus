@@ -1,9 +1,26 @@
+"use client";
+
+import { GlassCard } from "react-glass-ui";
 import Container from "../ui/Container";
+
+const project = [
+    {
+        total: 200,
+        name: "Clients",
+    },
+    {
+        total: 100,
+        name: "Projects",
+    },
+];
 
 export default function About() {
     return (
-        <section className="relative w-full bg-primary text-white pt-24 pb-48">
-            <Container className="flex flex-col md:flex-row gap-16 items-center">
+        <section
+            id="about"
+            className="relative w-full bg-primary text-white scroll-mt-24 pt-24 pb-48 overflow-hidden"
+        >
+            <Container className="flex flex-col md:flex-row gap-12 xl:gap-16 items-center">
                 {/* Kolom Gambar Kiri */}
                 <div className="w-full md:w-5/12 relative">
                     <figure className="w-full aspect-square rounded-[32px] overflow-hidden bg-white/10">
@@ -15,7 +32,7 @@ export default function About() {
                     </figure>
 
                     {/* Card Melayang */}
-                    <div className="absolute right-[-2rem] top-4/6 -translate-y-1/2 flex flex-col gap-4">
+                    {/* <div className="absolute right-[-2rem] top-4/6 -translate-y-1/2 flex flex-col gap-4">
                         <div className="relative right-4 backdrop-blur-xs shadow-[0_20px_40px_rgba(0,0,0,0.1)] rounded-xl p-4 border border-white/20">
                             <h3 className="text-4xl font-bold">+200</h3>
                             <p className="text-md">Clients</p>
@@ -24,18 +41,60 @@ export default function About() {
                             <h3 className="text-4xl font-bold">+100</h3>
                             <p className="text-md">Projects</p>
                         </div>
+                    </div> */}
+
+                    <div className="absolute right-[-2rem] top-4/6 -translate-y-1/2 flex flex-col gap-4">
+                        {project.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`relative ${index % 2 === 0 ? "right-4" : "left-3 xl:left-6"}`}
+                            >
+                                <GlassCard
+                                    blur={4}
+                                    distortion={40}
+                                    flexibility={0}
+                                    borderColor="#ffffff"
+                                    borderSize={1}
+                                    borderRadius={0}
+                                    borderOpacity={0.4}
+                                    backgroundColor="#717171"
+                                    backgroundOpacity={0.1}
+                                    innerLightColor="#ffffff"
+                                    innerLightSpread={1}
+                                    innerLightBlur={6}
+                                    innerLightOpacity={0}
+                                    outerLightColor="#ffffff"
+                                    outerLightSpread={1}
+                                    outerLightBlur={10}
+                                    outerLightOpacity={0}
+                                    color="#ffffff"
+                                    chromaticAberration={0}
+                                    onHoverScale={1}
+                                    saturation={100}
+                                    brightness={100}
+                                    className="py-4 px-4 text-center"
+                                >
+                                    <h3 className="text-2xl xl:text-4xl font-bold">
+                                        +{item.total}
+                                    </h3>
+                                    <p className="text-md">{item.name}</p>
+                                </GlassCard>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
                 {/* Kolom Teks Kanan */}
-                <div className="w-full md:w-7/12 flex flex-col gap-6">
-                    <h2 className="text-[32px]">About Us</h2>
-                    <h3 className="text-2xl font-bold">
+                <div className="w-full md:w-7/12 flex flex-col gap-4 lg:gap-6">
+                    <h1 className="text-2xl xl:text-default-32 font-medium">
+                        About Us
+                    </h1>
+                    <h2 className="text-xl xl:text-2xl font-bold">
                         We've successfully delivered 100+ projects.
-                    </h3>
+                    </h2>
 
-                    <div className="text-lg lg:text-xl">
-                        <p className="text-gray-300 text-sm leading-relaxed text-[20px]">
+                    <div className="text-base xl:text-xl flex flex-col gap-4">
+                        <p className="text-gray-300 leading-relaxed">
                             Di era digital yang terus berkembang, kebutuhan akan
                             solusi teknologi terintegrasi dan strategi kreatif
                             menjadi kunci pertumbuhan bisnis.{" "}
@@ -49,7 +108,7 @@ export default function About() {
                             yang berkomitmen membantu bisnis beradaptasi dan
                             berkembang secara berkelanjutan.
                         </p>
-                        <p className="text-gray-300 text-sm leading-relaxed text-[20px]">
+                        <p className="text-gray-300 leading-relaxed">
                             Dengan memadukan{" "}
                             <span className="font-bold text-white">
                                 keahlian teknis

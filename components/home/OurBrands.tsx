@@ -18,9 +18,12 @@ const brands = [
 
 export default function OurBrands() {
     return (
-        <section className="text-primary pb-12 xl:pb-48 relative w-full h-full">
+        <section
+            id="brands"
+            className="text-primary pb-12 xl:pb-48 relative scroll-mt-32 w-full h-full"
+        >
             <Container>
-                <div className="text-default-32">
+                <div className="text-2xl xl:text-default-32">
                     <h1 className="text-left text-primary">
                         Our <span className="font-bold">Brands</span>
                     </h1>

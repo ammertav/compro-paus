@@ -1,5 +1,5 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export interface NumberedListItemProps {
     number: number | string;
@@ -17,11 +17,11 @@ export default function NumberedListItem({
     numberBoxClassName = "",
 }: NumberedListItemProps) {
     return (
-        <li className={twMerge("flex gap-4 items-start", className)}>
+        <li className={cn("flex gap-4 items-start", className)}>
             <div
-                className={twMerge(
-                    "bg-primary text-white rounded-md w-12 h-12 flex-shrink-0 flex items-center justify-center text-xl lg:text-2xl font-bold",
-                    numberBoxClassName
+                className={cn(
+                    "bg-primary text-white rounded-md w-12 h-12 flex-shrink-0 flex items-center justify-center text-xl xl:text-2xl font-bold",
+                    numberBoxClassName,
                 )}
             >
                 {number}.
@@ -29,12 +29,16 @@ export default function NumberedListItem({
             <div className="text-lg">
                 {title &&
                     (typeof title === "string" ? (
-                        <h3 className="font-bold text-xl lg:text-2xl mb-1">{title}</h3>
+                        <h3 className="font-bold text-xl xl:text-2xl mb-1">
+                            {title}
+                        </h3>
                     ) : (
                         title
                     ))}
                 {typeof description === "string" ? (
-                    <p className="text-lg lg:text-xl leading-relaxed">{description}</p>
+                    <p className="text-base xl:text-xl leading-relaxed">
+                        {description}
+                    </p>
                 ) : (
                     description
                 )}
