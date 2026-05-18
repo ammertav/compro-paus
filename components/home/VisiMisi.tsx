@@ -16,7 +16,7 @@ export default function VisiMisi() {
                 <img
                     src="/images/logo-paus-black-logo-2.png"
                     alt="Visi Misi Background"
-                    className="w-full h-[900px] object-contain"
+                    className="w-full h-225 object-contain"
                 />
             </div>
 
