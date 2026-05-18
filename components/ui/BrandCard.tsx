@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export interface BrandCardProps {
@@ -25,11 +26,13 @@ export default function BrandCard({
                 className,
             )}
         >
-            <figure className="w-[140px] xl:w-[180px] h-[140px] xl:h-[180px] shrink-0 flex items-center justify-center p-4 border border-gray-200 rounded-full">
-                <img
+            <figure className="relative w-35 xl:w-45 h-35 xl:h-45 shrink-0 flex items-center justify-center p-4 rounded-full">
+                <Image
                     src={logo}
                     alt={name}
-                    className="w-full h-full object-contain"
+                    fill
+                    sizes="(min-width: 1280px) 180px, 140px"
+                    className="object-contain rounded-full p-4"
                 />
             </figure>
 

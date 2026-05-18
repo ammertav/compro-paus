@@ -9,10 +9,10 @@ import {
 
 const dummyProducts = [
     {
-        name: "Beilpos",
+        name: "BePOS",
         description:
-            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
-        logo: "/images/logo-brand-beil.png",
+            "BePOS merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.webp",
         isPrimary: false,
         fitur: [
             "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
@@ -23,10 +23,10 @@ const dummyProducts = [
         ],
     },
     {
-        name: "Beilpos",
+        name: "BePOS",
         description:
-            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
-        logo: "/images/logo-brand-beil.png",
+            "BePOS merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.webp",
         isPrimary: false,
         fitur: [
             "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
@@ -37,10 +37,10 @@ const dummyProducts = [
         ],
     },
     {
-        name: "Beilpos",
+        name: "BePOS",
         description:
-            "Beilpos merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
-        logo: "/images/logo-brand-beil.png",
+            "BePOS merupakan solusi Point of Sale (POS) yang membantu bisnis mengatasi pencatatan manual, keterbatasan kontrol kasir, serta pengelolaan stok dan multi-cabang. Dengan sistem terintegrasi, operasional bisnis menjadi lebih efisien dan terkontrol.",
+        logo: "/images/logo-brand-beil.webp",
         isPrimary: false,
         fitur: [
             "Sistem POS real-time untuk pencatatan transaksi yang akurat dan terpusat",
@@ -59,10 +59,10 @@ export default function Product() {
             className="bg-primary mt-24 lg:mt-32 relative scroll-mt-32 pt-10 lg:pt-0 pb-16 lg:pb-24"
         >
             {/* Wave SVG */}
-            <div className="absolute top-0 left-0 w-full -translate-y-[99%] overflow-hidden leading-none">
+            <div className="absolute top-0 left-0 w-full translate-y-[-99%] overflow-hidden leading-none">
                 <svg
                     viewBox="0 380 900 221"
-                    className="w-full h-[60px] md:h-[100px] lg:h-[140px]"
+                    className="w-full h-15 md:h-25 lg:h-35"
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "../ui/Container";
 import BrandCard from "../ui/BrandCard";
 
@@ -6,13 +7,13 @@ const brands = [
         name: "Ammertav",
         description:
             "Menyediakan solusi teknologi yang terintegrasi guna meningkatkan efektivitas operasional dan efisiensi bisnis",
-        logo: "/images/brand-ammertav.png",
+        logo: "/images/brand-ammertav.webp",
     },
     {
         name: "INK.Creative",
         description:
             "Membantu brand dalam membangun identitas yang kuat, konsisten, dan relevan di ranah digital melalui pendekatan kreatif dan strategis",
-        logo: "/images/brand-ink-creative.png",
+        logo: "/images/brand-ink-creative.webp",
     },
 ];
 
@@ -45,9 +46,11 @@ export default function OurBrands() {
             </Container>
 
             <div className="absolute -left-16 -top-18 -translate-y-2/10 z-50">
-                <img
-                    src="/images/logo-paus-black-logo-3.png"
+                <Image
+                    src="/images/logo-paus-black-logo-3.webp"
                     alt="Visi Misi Background"
+                    width={1030}
+                    height={967}
                     className="w-full h-full object-contain"
                 />
             </div>

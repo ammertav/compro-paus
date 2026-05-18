@@ -1,22 +1,23 @@
+import Image from "next/image";
 import Container from "../ui/Container";
 
 export default function Hero() {
     return (
         <section className="relative w-full pt-14 xl:pt-24 pb-24 xl:pb-48 overflow-hidden" id="home">
             {/* Background Wave */}
-            <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-auto -z-10 pointer-events-none">
+            <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-auto -z-10 pointer-events-none">
                 <img
                     src="/icons/wave-1.svg"
                     alt="wave background"
-                    className="w-full h-auto object-cover md:object-fill min-h-[400px]"
+                    className="w-full h-auto object-cover md:object-fill min-h-100"
                 />
             </div>
 
-            <div className="absolute top-[78%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-auto -z-10 pointer-events-none">
+            <div className="absolute top-[78%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-auto -z-10 pointer-events-none">
                 <img
                     src="/icons/wave-2.svg"
                     alt="wave background"
-                    className="w-full h-auto object-cover md:object-fill min-h-[400px]"
+                    className="w-full h-auto object-cover md:object-fill min-h-100"
                 />
             </div>
 
@@ -44,11 +45,14 @@ export default function Hero() {
                 </div>
                 <div className="w-full md:w-5/12 relative z-10">
                     {/* Bagian gambar yang disesuaikan */}
-                    <figure className="w-full aspect-[5/5] rounded-[48px] overflow-hidden shadow-lg">
-                        <img
-                            src="/images/image-hero.png"
+                    <figure className="relative w-full aspect-5/5 rounded-[48px] overflow-hidden shadow-lg">
+                        <Image
+                            src="/images/image-hero.webp"
                             alt="hero section"
-                            className="w-full h-full object-cover object-bottom"
+                            fill
+                            priority
+                            sizes="(min-width: 768px) 42vw, 100vw"
+                            className="object-cover object-bottom"
                         />
                     </figure>
                 </div>

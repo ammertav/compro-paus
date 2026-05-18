@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "../ui/Container";
 import NumberedListItem from "../ui/NumberedListItem";
 
@@ -13,9 +14,11 @@ export default function VisiMisi() {
         <section className="relative w-full h-full text-primary pt-24 pb-32">
             {/* Background Logo */}
             <div className="absolute right-1 -top-10 -translate-y-1/7 z-50">
-                <img
-                    src="/images/logo-paus-black-logo-2.png"
+                <Image
+                    src="/images/logo-paus-black-logo-2.webp"
                     alt="Visi Misi Background"
+                    width={1030}
+                    height={967}
                     className="w-full h-225 object-contain"
                 />
             </div>

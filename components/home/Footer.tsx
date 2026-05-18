@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "../ui/Container";
 
 export default function Footer() {
@@ -6,9 +7,11 @@ export default function Footer() {
             <Container>
                 <div className="flex flex-col items-center justify-center pt-0 pb-24 text-center text-primary">
                     <figure className="mb-2">
-                        <img
-                            src="/images/logo-paus-black.png"
+                        <Image
+                            src="/images/logo-paus-black.webp"
                             alt="Logo Paus"
+                            width={112}
+                            height={41}
                             className="h-10 w-auto object-contain mx-auto"
                         />
                     </figure>

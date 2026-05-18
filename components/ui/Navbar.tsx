@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -11,10 +12,13 @@ export default function Navbar() {
             <div className="w-full flex items-center justify-between max-w-6xl mx-auto py-4 px-6 md:px-16">
                 <figure className="flex-shrink-0 z-50 cursor-pointer">
                     <Link href="#home" className="w-full h-full">
-                        <img
-                            src="/images/logo-paus-black.png"
+                        <Image
+                            src="/images/logo-paus-black.webp"
                             alt="logo paus"
-                            className="h-8 object-contain"
+                            width={112}
+                            height={41}
+                            priority
+                            className="h-8 w-auto object-contain"
                         />
                     </Link>
                 </figure>
